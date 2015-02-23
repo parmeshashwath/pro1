@@ -48,7 +48,7 @@ System.out.println(r.getString(1)+"\t"+r.getInt(2)+"\t");
     String qq=r.getString(1)+" "+r.getInt(2)+" ";
 	byte[] contentInBytes = qq.getBytes();
        f.write(contentInBytes);
-    System.out.println(contentInBytes);
+  //  System.out.println(contentInBytes);
 }
 
 }
@@ -101,13 +101,16 @@ wordList.add(tokn.nextToken());
 }
 System.out.println("tokenized content of the File");
 System.out.println("*********************************");
-while ((sCurrentLine = br.readLine()) != null) {
-System.out.println(sCurrentLine);
-}
-StopWordRemove.stopwordRemove(wordList);
+br.reset();
 Iterator itr = wordList.iterator();
 while (itr.hasNext()) {
 System.out.println(itr.next());
+}
+
+StopWordRemove.stopwordRemove(wordList);
+Iterator itr1 = wordList.iterator();
+while (itr1.hasNext()) {
+System.out.println(itr1.next());
 }
 }
  catch (IOException e) {
