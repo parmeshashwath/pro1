@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -44,7 +43,12 @@ while (tokn.hasMoreTokens()) {
 wordList.add(tokn.nextToken());
 }
 }
-StopWordRemove.stopwordRemove(wordList);
+System.out.println("tokenized content of the File");
+System.out.println("*********************************");
+while ((sCurrentLine = br.readLine()) != null) {
+System.out.println(sCurrentLine);
+}
+//StopWordRemove.stopwordRemove(wordList);
 Iterator itr = wordList.iterator();
 while (itr.hasNext()) {
 System.out.println(itr.next());
@@ -61,6 +65,3 @@ ex.printStackTrace();
 }
 }
 }
-
-    
-
